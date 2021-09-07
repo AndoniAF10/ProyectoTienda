@@ -57,5 +57,25 @@ namespace ManejadoresTienda
                 Console.WriteLine("Fallo el guardado" + ex.Message);
             }
         }
+
+        public List<Productos> ObtenerCategorias(string filtro)
+        {
+            var listaCategorias = _usuariosAccesoDatos.ObtenerCategorias(filtro);
+            return listaCategorias;
+        }
+
+        public void EliminarCategorias(string contacto)
+        {
+            try
+            {
+                _usuariosAccesoDatos.EliminarCategorias(contacto);
+
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine("Fallo la eliminacion" + ex.Message);
+            }
+        }
     }
 }

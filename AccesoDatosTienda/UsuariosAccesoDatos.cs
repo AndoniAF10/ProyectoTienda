@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,6 +39,49 @@ namespace AccesoDatosTienda
 
                 Console.WriteLine("Fallo el guardado" + ex.Message);
             }
+        }
+
+        public void EliminarCategorias(string productos)
+        {
+            try
+            {
+                string consulta = string.Format("delete from producto where Nombre ='{0}'", productos);
+                _conexion.EjecutarConsulta(consulta);
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine("Fallo la eliminacion" + ex.Message);
+            }
+        }
+
+        public List<Productos> ObtenerCategorias(string filtro)
+        {
+            var ListaCategorias = new List<Productos>();
+            var ds = new DataSet();
+            string consulta = string.Format("select * from producto where Nombre like '%{0}%'", filtro);
+            ds = _conexion.ObtenerDatos(consulta, "producto");
+
+            var dt = new DataTable();
+            dt = ds.Tables[0];
+
+            foreach (DataRow row in dt.Rows)
+            {
+
+                var contacto = new Productos
+                {
+                    IdProducto = int.Parse(row["idproducto"].ToString()),
+                    Nombre = row["nombre"].ToString(),
+                    Descripcion = row["descripcion"].ToString(),
+                    Precio = int.Parse(row["precio"].ToString())
+                };
+
+
+                ListaCategorias.Add(contacto);
+
+            }
+
+            return ListaCategorias;
         }
     }
 }
