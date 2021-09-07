@@ -77,5 +77,19 @@ namespace ManejadoresTienda
                 Console.WriteLine("Fallo la eliminacion" + ex.Message);
             }
         }
+
+        public void ActualizarCategorias(Productos producto)
+        {
+            try
+            {
+                _usuariosAccesoDatos.ActualizarCategorias(producto);
+
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine("Fallo la actualizacion" + ex.Message);
+            }
+        }
     }
 }

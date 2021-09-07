@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Tienda
 {
-    public class Class1
+    public class Program
     {
+        static void Main()
+        {
 
+        }
     }
 }
