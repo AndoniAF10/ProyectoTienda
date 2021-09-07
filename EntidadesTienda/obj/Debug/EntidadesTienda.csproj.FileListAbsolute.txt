@@ -1,0 +1,6 @@
+C:\Users\CESAR\source\repos\Tienda\EntidadesTienda\bin\Debug\EntidadesTienda.dll
+C:\Users\CESAR\source\repos\Tienda\EntidadesTienda\bin\Debug\EntidadesTienda.pdb
+C:\Users\CESAR\source\repos\Tienda\EntidadesTienda\obj\Debug\EntidadesTienda.csproj.AssemblyReference.cache
+C:\Users\CESAR\source\repos\Tienda\EntidadesTienda\obj\Debug\EntidadesTienda.csproj.CoreCompileInputs.cache
+C:\Users\CESAR\source\repos\Tienda\EntidadesTienda\obj\Debug\EntidadesTienda.dll
+C:\Users\CESAR\source\repos\Tienda\EntidadesTienda\obj\Debug\EntidadesTienda.pdb
