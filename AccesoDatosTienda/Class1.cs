@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tienda
+namespace AccesoDatosTienda
 {
     public class Class1
     {
-
     }
 }
